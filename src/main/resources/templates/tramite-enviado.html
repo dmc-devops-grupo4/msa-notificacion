@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trámite Enviado con Éxito</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background-color: #2E7D32; /* Color verde más oscuro */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .content {
+            padding: 20px;
+        }
+        .footer {
+            background-color: #e0f2f1; /* Color verde claro */
+            color: #777;
+            padding: 10px;
+            text-align: center;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #2E7D32; /* Color verde más oscuro */
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Trámite Enviado con Éxito</h1>
+        </div>
+        <div class="content">
+            <p>Estimado(a) <strong th:text="${nombre}"></strong>,</p>
+            <p>Nos complace informarle que su trámite con el número de documento <strong th:text="${nroDocumento}"></strong> ha sido enviado con éxito.</p>
+            <p>Asunto de la solicitud: <strong th:text="${asunto}"></strong></p>
+            <p>Gracias por utilizar nuestro servicio. Puede verificar el estado de su trámite en cualquier momento a través de nuestra plataforma de Mesa de Partes Virtual.</p>
+            <p>Atentamente,</p>
+            <p>El equipo de Soporte</p>
+            <a href="https://example.com" class="button">Verificar Trámite</a>
+        </div>
+        <div class="footer">
+            <p>&copy; 2024 Su Compañía. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</body>
+</html>
